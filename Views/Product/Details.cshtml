@@ -1,0 +1,18 @@
+﻿@model Product
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-href-include="~/css/*.css">
+    <script src="~/js/site.js" asp-src-include="~/js/*.js"></script>
+</head>
+<body>
+    <h1>@Model.ProductName</h1>
+    <p>Price: @Model.Price</p>
+    <p>Description: @Model.Description</p>
+
+    <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.Id">Edit Product</a>
+    <a asp-controller="Product" asp-action="Index">Back to List</a>
+</body>
+</html>
